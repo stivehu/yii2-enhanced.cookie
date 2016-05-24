@@ -1,0 +1,21 @@
+{
+    "name": "stivehu/yii2-enhanced.cookie",
+    "description": "Selected checkbox is remain after paging",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","widgets","cookie"],
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Gábor István",
+            "email": "stive.hu@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "stivehu\\enhanced.cookie\\": ""
+        }
+    }
+}
