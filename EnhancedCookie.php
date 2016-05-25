@@ -2,6 +2,8 @@
 
 namespace stivehu\enhancedcookie;
 
+use Yii;
+
 /**
  * Description of EnhancedCookie
  *
