@@ -28,13 +28,13 @@ class EnhancedCookie
     public static function getBigCookie($cookieName)
     {
         $result = false;
-        if (isset(Yii::$app->request->cookies->get($cookieName))) {
-            $result = Yii::$app->request->cookies->get($cookieName);
+        if (isset($_COOKIE[$cookieName])) {
+            $result = $_COOKIE[$cookieName];
         }
 
         for ($i = 1; $i < 1000; $i++) {
-            if (isset(Yii::$app->request->cookies->get($cookieName . "---$i"))) {
-                $result = $result . Yii::$app->request->cookies->get($cookieName . "---$i");
+            if (isset($_COOKIE[$cookieName . "---$i"])) {
+                $result = $result . $_COOKIE[$cookieName . "---$i"];
             } else {
                 break;
             }
