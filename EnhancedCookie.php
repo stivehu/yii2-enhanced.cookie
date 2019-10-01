@@ -27,7 +27,7 @@ class EnhancedCookie
      */
     public static function getBigCookie($cookieName)
     {
-        $result = false;
+        $result = null;
         if (isset($_COOKIE[$cookieName])) {
             $result = $_COOKIE[$cookieName];
         }
