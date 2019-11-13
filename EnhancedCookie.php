@@ -41,5 +41,23 @@ class EnhancedCookie
         }
         return $result;
     }
+    
+    
+    /**
+     * clear fragmented cookies
+     * @param cookie root name     
+     */
+        public static function cleanBigCookie($cookieName) {
+        if (isset($_COOKIE[$cookieName])) {
+            unset($_COOKIE[$cookieName]);
+        }
+        for ($i = 1; $i < 1000; $i++) {
+            if (isset($_COOKIE[$cookieName . "---$i"])) {
+                unset($_COOKIE[$cookieName . "---$i"]);
+            } else {
+                break;
+            }
+        }
+    }
 
 }
