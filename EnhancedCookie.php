@@ -27,7 +27,7 @@ class EnhancedCookie
      */
     public static function getBigCookie($cookieName)
     {
-        $result = null;
+        $result = false;
         if (isset($_COOKIE[$cookieName])) {
             $result = $_COOKIE[$cookieName];
         }
@@ -41,16 +41,12 @@ class EnhancedCookie
         }
         return $result;
     }
-    
-    
+
     /**
-     * clear fragmented cookies
-     * @param cookie root name     
+     * @param $cookieName
      */
-        public static function cleanBigCookie($cookieName) {
-        if (isset($_COOKIE[$cookieName])) {
-            unset($_COOKIE[$cookieName]);
-        }
+    public static function cleanBigCookie($cookieName)
+    {
         for ($i = 1; $i < 1000; $i++) {
             if (isset($_COOKIE[$cookieName . "---$i"])) {
                 unset($_COOKIE[$cookieName . "---$i"]);
